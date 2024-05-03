@@ -1,0 +1,402 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: green;
+    color: #FFFFFF;
+}
+.topnav {
+    background-color: #fff;
+    overflow: hidden;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:1;
+}
+    #header{
+        width: 100%;
+        height: 110vh;
+        background-image: url(images/thumpnail.png); 
+        background-size: cover;
+        background-position: center; 
+        overflow: hidden;
+        
+       }
+       .container{
+           padding: 30px 5%;
+           
+  }
+  nav{
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+       
+   }
+   .logo{
+    width:110px;
+    margin-left: 20px;
+       
+   }
+   .yvf{
+    color:  green;
+    margin-left: -2%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin-top: -0.3%;
+   }
+
+nav ul li{
+    display: inline_block;
+    list-style:none;
+     margin: 10px 35px;
+   
+
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    
+    
+    
+}
+li {
+    float: left;
+  }
+  nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: green;
+    position: absolute;
+    left:0;
+    bottom: -6px;
+    transition: 0.5s;
+    
+}
+nav ul li a:hover::after{
+    width:100%;
+}
+.header-text{
+    margin-top: 10%;
+    font-size: 20px;
+    margin-left: -2%;
+}
+
+.floating{
+    display: block;
+	position:fixed;
+	width:62px;
+	height:62px;
+	bottom:40px;
+	right:40px;
+	background-color:green;
+	color:#FFFFFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:50px;
+	box-shadow: 2px 2px 3px hsl(343, 98%, 50%);
+    z-index:100;
+}
+
+.floating-m{
+	margin-top:6px;
+   
+    
+   }
+
+.floating:hover{
+    transform: scale(1.1);
+    }
+
+    #scrollToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 40px;
+        left: 40px;
+        z-index: 99;
+        font-size: 20px;
+        border: none;
+        outline: none;
+        background-color: rgb(210, 117, 117);
+        color: white;
+        cursor: pointer;
+        padding: 16px;
+        border-radius: 50px;
+        text-decoration: none;
+        bottom:42px;
+        width:50px;
+	    height:50px;
+        opacity: 0.7;
+    }
+    #scrollToTopBtn:hover{
+        transform: scale(1.1);
+       
+        }
+
+
+  /*------------------about----------------*/
+  #about{
+    padding: 30px 0;
+}
+.about-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.about-list div{
+ background: purple;  
+ padding: 40px;
+ font-size: 13px;
+ font-weight: 300;
+ border-radius: 10px;
+ transition: background 0.5s, transform 0.5s;
+}
+.about-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+
+}
+.about-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.about-list div a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+
+}
+.about-list div:hover{
+  background: #ff004f;
+  transform: translateY(-10px);  
+}
+
+
+/*------------------Charity----------------*/
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.charity-text {
+   
+    margin-bottom: 40px;
+    flex-basis: 60%; /* Adjusted width for the left side */
+    position: relative;
+    overflow: hidden;
+  
+}
+.charity-text p{
+    margin-right: 2em;
+}
+
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;  
+    color: #ffff;
+   
+}
+
+#slideshow {
+    flex-basis: 40%; /* Adjusted width for the right side */
+    order: 1; /* Set order to 1 to keep it on the left */
+    text-align:left; 
+    margin-top: 115px;
+   
+}
+
+#slideshow img{
+    width: 100%;
+    display: block; 
+    height: 80vh;   
+}
+
+.list{
+color: black;
+}
+
+
+
+ /*------------------donate----------------*/
+
+
+ /*------------------membership----------------*/
+#membership{
+    padding: 30px 0;
+}
+.members-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.members img{
+    width: 60%;
+    height: 40vh;
+    border-radius: 15px; 
+    
+
+}
+
+span{
+    
+    color: #ff004f;  
+
+}
+
+/*------------------contact----------------*/
+
+.contact-right{
+    margin-left: 800px;
+    margin-top: -308px;
+}
+.copyright{
+    width: 100%;
+    text-align:center;
+    padding:25px 0; 
+    background: purple;
+    font-weight: 300;
+    margin-top: 20px; 
+  }
+  .copyright i{
+   color: #ff004f;   
+  }
+  .social-icons{
+    margin-top: 30px;
+    
+    }
+    .social-icons a{
+      text-decoration: none;
+      font-size: 30px;
+      margin-right: 15px;
+      color: #ababab;
+      display : inline-block;
+      transition: transform 0.5s;
+    }
+    .social-icons a:hover{
+      color:purple; 
+      transform: translateY(-5px);
+    }
+  /*-----------------css for small screen----------*/
+  nav .fas{
+    display: none;
+}
+
+@media only screen and (max-width:600px){
+    .topnav{
+       height: auto; 
+       }
+       #header{
+        background-image: url(images/thumbnail2.png); 
+       
+       }
+    
+       .yvf{
+        margin-top: -60px;
+        margin-left: 130px;
+        font-size: 12px;
+    
+    }
+
+    .floating{
+        right:120px;
+        
+        
+    }
+       nav .fas {
+        display: block;
+        font-size: 25px;
+        color: rgb(2, 2, 0);
+        position: absolute;
+        top: 25px;
+        left: 230px;
+        cursor: pointer;
+        z-index: 3;
+    
+    }
+    nav ul{
+        background: #fff;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    
+    }
+    nav ul li{
+     display: block;
+     margin:35px;   
+    }
+    nav ul .fas{
+        position:absolute;
+        top: 25px;
+        left: -2px;
+        cursor:pointer;
+        
+    }
+    .sub-title{
+     font-size: 40px;   
+    }
+    .charity-text{
+        flex-basis: 100%;;
+      }
+      #slideshow{
+      flex-basis: 100%;
+      margin-top: 10px;
+
+      }
+      #membership{
+        display: block;
+       
+       }
+      .contact-right{
+        margin-top: 40px;
+        margin-left: 2px;
+      }
+        #donate{
+        display: block; 
+      }
+     
+        nav ul li::after {
+        display: none; /* Hiding the hover effect */
+    }
+
+    nav ul.show {
+        display: block; /* Displaying the navigation links when menu is active */
+    }
+
+    #scrollToTopBtn {
+        display: none; 
+        bottom: 0; 
+        right: 0; 
+        width: 0px; 
+        height: 0px; 
+        visibility: hidden; 
+    }
+    .copyright{
+        font-size:14px;  
+    }
+    }
