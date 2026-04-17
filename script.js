@@ -8,23 +8,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const navMenu = document.getElementById('nav-menu');
     const navToggle = document.getElementById('nav-toggle');
-    const navClose = document.getElementById('nav-close');
+    const navIcon = document.getElementById('nav-icon');
     const navLinks = document.querySelectorAll('.nav-link');
     const header = document.querySelector('.header');
     
-    // Open mobile menu
+    // Toggle mobile menu
     if (navToggle) {
         navToggle.addEventListener('click', () => {
-            navMenu.classList.add('show-menu');
-            document.body.style.overflow = 'hidden';
-        });
-    }
-    
-    // Close mobile menu
-    if (navClose) {
-        navClose.addEventListener('click', () => {
-            navMenu.classList.remove('show-menu');
-            document.body.style.overflow = '';
+            navMenu.classList.toggle('show-menu');
+            
+            // Toggle icon between bars and X
+            if (navMenu.classList.contains('show-menu')) {
+                navIcon.classList.remove('fa-bars');
+                navIcon.classList.add('fa-times');
+                document.body.style.overflow = 'hidden';
+            } else {
+                navIcon.classList.remove('fa-times');
+                navIcon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            }
         });
     }
     
@@ -32,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('show-menu');
+            navIcon.classList.remove('fa-times');
+            navIcon.classList.add('fa-bars');
             document.body.style.overflow = '';
         });
     });
@@ -42,6 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
             !navToggle.contains(e.target) && 
             navMenu.classList.contains('show-menu')) {
             navMenu.classList.remove('show-menu');
+            navIcon.classList.remove('fa-times');
+            navIcon.classList.add('fa-bars');
             document.body.style.overflow = '';
         }
     });
