@@ -72,12 +72,24 @@ body {
     background-color: var(--white);
     line-height: 1.6;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
+/* Prevent layout shift on images */
 img {
     max-width: 100%;
     height: auto;
     display: block;
+    aspect-ratio: attr(width) / attr(height);
+}
+
+/* Prevent text reflow */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 a {
@@ -157,6 +169,10 @@ select {
     border-radius: var(--radius-md);
     transition: var(--transition-normal);
     text-align: center;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .btn-primary {
@@ -310,13 +326,21 @@ select {
     box-shadow: var(--shadow-md);
 }
 
-.nav-toggle,
-.nav-close {
+.nav-toggle {
     display: none;
     background: transparent;
     font-size: 1.5rem;
     color: var(--primary-color);
     padding: 8px;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav-toggle:hover {
+    color: var(--primary-dark);
+    transform: scale(1.1);
 }
 
 /* ==================== HERO SECTION ==================== */
@@ -1456,21 +1480,25 @@ select {
         text-align: center;
     }
     
-    .nav-toggle,
-    .nav-close {
+    .nav-toggle {
         display: block;
         position: fixed;
-        z-index: 1002;
-    }
-    
-    .nav-toggle {
         top: 20px;
         right: 20px;
+        z-index: 1002;
+        background: var(--white);
+        border-radius: var(--radius-sm);
+        box-shadow: var(--shadow-sm);
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
-    .nav-close {
-        top: 25px;
-        right: 25px;
+    .nav-toggle:hover {
+        background: var(--off-white);
+        box-shadow: var(--shadow-md);
     }
     
     .logo-text {
@@ -1594,6 +1622,504 @@ select {
 }
 
 /* ==================== ACCESSIBILITY ==================== */
+@media (prefers-reduced-motion: reduce) {
+
+/* ==================== ENHANCED MOBILE OPTIMIZATIONS ==================== */
+
+/* Tablet (769px - 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 95%;
+        padding: 0 15px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .members-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .member-image {
+        height: 240px;
+    }
+    
+    .charity-content {
+        gap: 30px;
+    }
+    
+    .donate-content {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Mobile Landscape (481px - 768px) */
+@media (max-width: 768px) {
+    /* Typography - Better readability */
+    html {
+        font-size: 15px;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .section-subtitle {
+        font-size: 0.8rem;
+        letter-spacing: 1.5px;
+    }
+    
+    /* Container & Spacing */
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    
+    .section {
+        padding: 50px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    /* Buttons - Touch-friendly */
+    .btn {
+        padding: 14px 28px;
+        font-size: 1rem;
+        min-height: 48px; /* Touch target size */
+    }
+    
+    .btn-large {
+        padding: 16px 32px;
+        font-size: 1.05rem;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .hero-buttons {
+        gap: 15px;
+    }
+    
+    /* Images - Optimized */
+    .hero {
+        min-height: 400px;
+        background-position: center !important;
+    }
+    
+    .donate-image img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .gallery-img-main {
+        height: 250px;
+    }
+    
+    .gallery-thumbnails {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+    
+    .gallery-thumb {
+        height: 60px;
+    }
+    
+    /* Members Grid */
+    .members-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .member-image {
+        height: 250px;
+    }
+    
+    .member-info {
+        padding: 20px;
+    }
+    
+    .member-info h3 {
+        font-size: 1.15rem;
+    }
+    
+    .member-info p {
+        font-size: 0.9rem;
+    }
+    
+    /* Donation Cards */
+    .donation-methods {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .donation-card {
+        padding: 20px;
+    }
+    
+    .donation-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    /* Contact Form */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .contact-form-container {
+        padding: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-control {
+        padding: 14px 16px;
+        font-size: 16px; /* Prevents zoom on iOS */
+        min-height: 48px;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    
+    /* Floating Buttons */
+    .floating-whatsapp {
+        width: 55px;
+        height: 55px;
+        font-size: 1.8rem;
+        bottom: 80px;
+        right: 20px;
+    }
+    
+    .scroll-top {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        bottom: 20px;
+        left: 20px;
+    }
+}
+
+/* Small Mobile (320px - 480px) */
+@media (max-width: 480px) {
+    /* Typography - Compact */
+    html {
+        font-size: 14px;
+    }
+    
+    .hero {
+        min-height: 350px;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero-description {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.75rem;
+    }
+    
+    /* Spacing - Tighter */
+    .section {
+        padding: 40px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 30px;
+    }
+    
+    .container {
+        padding: 0 12px;
+    }
+    
+    /* Buttons - Full width on small screens */
+    .btn {
+        padding: 13px 24px;
+        font-size: 0.95rem;
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .btn-large {
+        padding: 15px 28px;
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    
+    /* Images */
+    .gallery-img-main {
+        height: 200px;
+    }
+    
+    .gallery-thumbnails {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .member-image {
+        height: 220px;
+    }
+    
+    /* Impact Stats */
+    .impact-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .impact-item {
+        padding: 20px 15px;
+    }
+    
+    .impact-number {
+        font-size: 2rem;
+    }
+    
+    .impact-label {
+        font-size: 0.85rem;
+    }
+    
+    /* About Cards */
+    .about-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .about-card {
+        padding: 25px 20px;
+    }
+    
+    .about-values {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Charity Programs */
+    .charity-programs {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .program-card {
+        padding: 25px 20px;
+    }
+    
+    .program-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    /* Donation */
+    .donation-detail {
+        font-size: 0.9rem;
+    }
+    
+    .paypal-email {
+        word-break: break-all;
+        font-size: 0.85rem;
+    }
+    
+    /* CTA Section */
+    .cta-content h2 {
+        font-size: 1.4rem;
+        line-height: 1.3;
+    }
+    
+    .cta-content p {
+        font-size: 0.95rem;
+    }
+    
+    /* Footer */
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    /* Navigation */
+    .nav-menu {
+        width: 85%;
+        max-width: 300px;
+    }
+    
+    .logo-text {
+        font-size: 0.75rem;
+    }
+    
+    .logo {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Extra Small Mobile (320px) */
+@media (max-width: 360px) {
+    html {
+        font-size: 13px;
+    }
+    
+    .hero-title {
+        font-size: 1.3rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .impact-number {
+        font-size: 1.8rem;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .member-image {
+        height: 200px;
+    }
+    
+    .gallery-img-main {
+        height: 180px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Larger touch targets */
+    .btn {
+        min-height: 48px;
+        min-width: 48px;
+    }
+    
+    .nav-link {
+        min-height: 48px;
+        padding: 16px 0;
+    }
+    
+    .member-social a {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+    
+    /* Remove hover effects on touch devices */
+    .member-card:hover {
+        transform: none;
+    }
+    
+    .member-card:hover .member-image img {
+        transform: none;
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+}
+
+/* High DPI / Retina Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+    /* Can be enabled if needed */
+    /*
+    :root {
+        --off-white: #1a1a1a;
+        --white: #2d2d2d;
+        --light-gray: #404040;
+        --gray: #a0a0a0;
+        --dark-gray: #e0e0e0;
+    }
+    */
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .nav-toggle,
+    .floating-whatsapp,
+    .scroll-top,
+    .btn,
+    .contact-form {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    
+    .section {
+        padding: 20px 0;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+    
+    a[href]::after {
+        content: " (" attr(href) ")";
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
