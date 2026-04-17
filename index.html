@@ -3,419 +3,755 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Young Visioners Foundation</title>
+    <meta name="description" content="Young Visioners Foundation - A beacon of hope serving those in direst need across the globe. Join us in making a difference.">
+    <title>Young Visioners Foundation | Transforming Lives Through Compassion</title>
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/202d73d088.js" crossorigin="anonymous"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
-    <div id="header"> 
-        <div class="topnav">
-        <nav>
-            <img src="images/logo.png" class="logo"> <h1 class="yvf">&nbsp;&nbsp;YOUNG VISIONERS FOUNDATION|</h1>
-            <ul id="sidemenu">
-                <li><a href='#header'>Home</a></li>
-                <li><a href='#about'>About</a></li>
-                <li><a href='#charity'>Charity</a></li>
-                <li><a href='#membership'>Membership</a></li>
-                <li><a href='#donate'>Donate</a></li>
-                <li><a href='#contact'>Contacts</a></li>
-                <i class="fas fa-times" onclick="closemenu()"></i>
-            </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
-    </nav>
-    </div>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <a href="https://wa.me/+254740770267?text=Hallo!%20Young Visioners Foundation" class="floating" target="_blank">
-    <i class="fa fa-whatsapp floating-m" title="Chat with us!"></i>
-    </a> 
-    </div>
-    <a onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">
-    <i class="fa-solid fa-angle-up"></i>
-    </a>
- <!-----------------about-------->
-    <div id="about">
-        <div class="container">
-           <h1 class="sub-title">About Us</h1>
-           <p id="summary"><span><strong>Young Visioners Foundation</strong></span> is a beacon of hope and compassion, 
-            driven by a profound vision to serve those in direst need across the globe. 
-            With a steadfast commitment to alleviating suffering and fostering sustainable
-             change, our foundation is dedicated to reaching out to the most vulnerable 
-             populations, irrespective of geographical boundaries or socio-economic status.</p>
-            <p id="details">At the heart of our mission lies a deep-seated resolve to extend a helping hand
-             to the poor, children, sick, needy, uneducated, oppressed, and depressed individuals
-              who often find themselves marginalized and forgotten. We recognize that their 
-              struggles encompass not only physical afflictions but also mental and emotional
-            anguish, compounded by a lack of guidance and support.
-            Our multifaceted approach to humanitarian aid encompasses a range of 
-            interventions aimed at addressing the holistic needs of individuals and communities. 
-            Through our programs, we provide essential resources such as food, shelter, and medical
-             care to alleviate immediate hardships. Moreover, we recognize the critical importance
-              of education and empowerment in breaking the cycle of poverty and despair. As such,
-               we are deeply committed to offering educational opportunities and mentorship to 
-               empower individuals to chart a brighter future for themselves and their families.
-            Guided by principles of empathy, integrity, and solidarity, we work tirelessly to 
-            make a tangible difference in the lives of those we serve. By fostering resilience,
-             dignity, and self-reliance, we aim not only to relieve pain and suffering but also 
-             to catalyze enduring transformation at both the individual and community levels.
-            In a world marked by inequality and injustice, the Foundation for Global 
-            Transformation stands as a beacon of hope, embodying the belief that 
-            together, we can create a more compassionate and equitable world for all.</p>
-            <br><br>
-            <button onclick="myFunction()" id="readMoreLessBtn" 
-            class="readMoreLessBtnA">Read more</button>
+    <!-- ==================== NAVIGATION ==================== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#header" class="nav-logo">
+                <img src="images/logo.png" alt="Young Visioners Foundation Logo" class="logo">
+                <span class="logo-text">YOUNG VISIONERS FOUNDATION</span>
+            </a>
             
-           <div class="about-list">
-              <div>
-               <i class="fa-regular fa-heart"></i>
-               <h2>Our Vision:</h2>
-               <p>To serve the people in greatest need around the world, 
-                to relieve their pain and suffering, 
-                and to promote the transformation of their lives and conditions.
-                  </p>
-                   
-              </div>
-              <div>
-               <i class="fa-regular fa-heart"></i>
-               <h2>Our Mission:</h2>
-               <p>To provide the poor, 
-                Children, Sick, Needy, Uneducated,
-                 Oppressed and Depressed of the people with Physical, Mental, 
-                Emotional and Mentorship help.</p>
-                   
-              </div>
-              <div><i class="fa-regular fa-heart"></i>
-               <h2>Our Values:</h2>
-               <p>Compassion, Integrity, Collaboration, Inclusivity, 
-                Empathy, Sustainability, </p>
-                   
-              </div> 
-           </div>
-        </div>   
-       </div>
-    <!-----------------Charity---------->
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#header" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#charity" class="nav-link">Charity</a></li>
+                    <li class="nav-item"><a href="#membership" class="nav-link">Members</a></li>
+                    <li class="nav-item"><a href="#donate" class="nav-link nav-donate">Donate Now</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="nav-close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <button class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
 
-    <div id="charity"></div>
-    <div class="container">
-      <div class="row">
-        <div class="charity-text">
-            <h1 class="sub-title">Charity Work</h1><br> 
-        <p id="less_content"> <span><strong>Young Visioners Foundation</strong></span> is deeply committed to its mission 
-            of serving those in greatest need worldwide,
-             with a vision to alleviate pain and suffering while promoting 
-             lasting transformation in their lives and communities. 
-             Our charity 
-             work engagement is driven by a holistic approach that addresses the 
-             diverse and complex needs of individuals facing poverty, illness, 
-             lack of education, oppression, and emotional distress.
-             At the core of our charitable efforts is a profound commitment to
-              providing comprehensive support to vulnerable populations. 
-              Through strategic partnerships and collaborations with local 
-              organizations and communities, we deliver essential resources and 
-              services tailored to meet<br> the specific needs of each group we serve.
-            Our initiatives span a wide spectrum of interventions, including:</p><br>
-            <span id="more_content"><h5 class="list">1. Basic Needs Assistance:</h5> We provide immediate relief to those 
-            facing acute deprivation by offering access to food,<br> clean water, shelter,
-             and medical care. By addressing these fundamental needs, we aim to<br> alleviate
-              the immediate hardships faced by individuals and families in crisis.
-            <h5 class="list">2. Education and Empowerment:</h5> Recognizing the transformative power of 
-            education, we invest in programs that expand<br> access to quality schooling and 
-            vocational training for children and adults alike.<br> Through scholarships, 
-            literacy programs, and skills development initiatives, we empower individuals
-             to break the cycle of poverty and build a brighter future for themselves and 
-             their communities.
-           <h5 class="list">3. Healthcare Services:</h5> We prioritize the health and well-being of those 
-            we serve by providing essential healthcare services, including preventive care, 
-            medical treatment, and mental health support.<br> Our initiatives aim to address the 
-            root causes of illness and promote holistic healing and wellness.
-            <h5 class="list">4. Mentorship and Support:</h5> We believe in the importance of nurturing 
-            supportive relationships and fostering resilience<br> in the face of adversity. 
-            Through mentorship programs and peer support networks,<br> we offer emotional guidance,
-             counseling, and practical assistance to individuals struggling <br>with mental health 
-             challenges, trauma, or social isolation.<br><br>
-             Through our charity work engagement, we seek to embody the values of compassion,<br> solidarity, 
-             and justice, aiming to make a meaningful and sustainable impact on the lives of<br> those we serve. 
-             Together with our partners and supporters, we remain steadfast in our commitment to building a world 
-             where every individual has the opportunity to thrive<br> and fulfill their potential, 
-             regardless of their circumstances.
-            </span>
-            <br><br>
-            <button onclick="myFunction3()" id="readMoreLessBtn3"
-            class="readMoreLessBtn3">Read more</button>
-        </div>
-        <div id="slideshow">
-           
-            <img src="images/charity.jpg">
-            <img src="images/charity1.jpg" style="display: none;">
-            <img src="images/charity2.jpg" style="display: none;">
-            <img src="images/charity3.jpg" style="display: none;">
-            <img src="images/charity4.jpg" style="display: none;">
-            <img src="images/charity5.jpg" style="display: none;">
-            <img src="images/charity6.jpg" style="display: none;">
-            <img src="images/charity7.jpg" style="display: none;">
-            <img src="images/charity8.jpg" style="display: none;">
-            <img src="images/charity9.jpg" style="display: none;">
-            <img src="images/charity10.jpg" style="display: none;">
-            <img src="images/charity11.jpg" style="display: none;">
-            <img src="images/charity12.jpg" style="display: none;">
-            <img src="images/charity13.jpg" style="display: none;">
-            <img src="images/charity14.jpg" style="display: none;">
-            <img src="images/charity15.jpg" style="display: none;">
-            <img src="images/charity16.jpg" style="display: none;">
-            <img src="images/charity17.jpg" style="display: none;">
-            <img src="images/charity18.jpg" style="display: none;">
-            <img src="images/charity19.jpg" style="display: none;">
-            <img src="images/charity20.jpg" style="display: none;">
-            <img src="images/charity21.jpg" style="display: none;">
-            <img src="images/charity22.jpg" style="display: none;">
-            <img src="images/charity23.jpg" style="display: none;">
-            <img src="images/charity25.jpg" style="display: none;">
-        </div>   
-       
-          
-    
-</div>
-</div>
-        
-<!-----------------Members---------->
-<div id="membership">
-    <div class="container">
-        <h1 class="sub-title">Our Members</h1>
-        <p id="less">Members of <span><strong>Young Visioners Foundation</strong></span> demonstrate a profound dedication
-             to the organization's mission of serving those in direst need worldwide. 
-             With a shared vision of alleviating pain and suffering while fostering 
-             enduring transformation, our members are committed to making a meaningful 
-             impact in the lives and communities of vulnerable populations.</p>
-            <p id="more">Our members actively engage in charity work that adopts a holistic
-             approach, recognizing and addressing the multifaceted needs of individuals
-             facing poverty, illness, lack of education, oppression, and emotional distress.
-              Through strategic partnerships and collaborations with local organizations and 
-              communities, our members deliver essential resources and tailored services to
-               meet the distinct needs of each group we serve.
-            From providing basic needs assistance such as food, clean water, shelter, 
-            and medical care to offering educational opportunities and vocational training,
-             our members empower individuals to break the cycle of poverty and build a brighter
-              future for themselves and their communities. Additionally, our commitment 
-              to healthcare services, mentorship, and advocacy ensures that we not only 
-              address immediate challenges but also work towards systemic change to create 
-              a more just and equitable society for all.
-            Guided by values of compassion, solidarity, and justice, our members 
-            embody the spirit of service, striving to make a sustainable impact on
-             the lives of those we serve. Together with our partners and supporters, 
-             we remain steadfast in our commitment to building a world where every 
-             individual has the opportunity to thrive and fulfill their potential, 
-             regardless of their circumstances.</p><br><br>
-             <button onclick="myFunction2()" id="readMoreLessBtn2" 
-             class="readMoreLessBtn">Read more</button>
-
-    
-        <div class="members_container">
-            <div class="members">
-                <img src="images/matuku.jpg">
-                <div class="name">
-                    <h3>Matuku Kulu</h3>
-                    <p>Chairman/Managing Director</p>   
+    <main>
+        <!-- ==================== HERO SECTION ==================== -->
+        <section class="hero section" id="home">
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+                <h1 class="hero-title fade-in">
+                    Bringing <span class="highlight">Hope</span> to Those<br>Who Need It Most
+                </h1>
+                <p class="hero-description fade-in">
+                    Young Visioners Foundation is dedicated to serving the poor, children, sick, 
+                    needy, and oppressed worldwide. Together, we can transform lives.
+                </p>
+                <div class="hero-buttons fade-in">
+                    <a href="#donate" class="btn btn-primary">
+                        <i class="fas fa-heart"></i> Donate Now
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
-        
-        
+            <div class="hero-scroll">
+                <a href="#about" class="hero-scroll-btn">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </section>
 
-        <div class="members">
-            <img src="images/felister.jpg">
-            <div class="name">
-                <h3>Felister Mwenthya</h3>
-                <p>Vice Chair/Deputy Director</p>   
-              </div>
-        </div>
+        <!-- ==================== ABOUT SECTION ==================== -->
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Who We Are</span>
+                    <h2 class="section-title">About Us</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text fade-in-left">
+                        <p class="about-intro">
+                            <strong>Young Visioners Foundation</strong> is a beacon of hope and compassion, 
+                            driven by a profound vision to serve those in direst need across the globe. 
+                            With a steadfast commitment to alleviating suffering and fostering sustainable 
+                            change, our foundation is dedicated to reaching out to the most vulnerable 
+                            populations, irrespective of geographical boundaries or socio-economic status.
+                        </p>
+                        
+                        <div class="about-details" id="about-details">
+                            <p>
+                                At the heart of our mission lies a deep-seated resolve to extend a helping hand
+                                to the poor, children, sick, needy, uneducated, oppressed, and depressed individuals
+                                who often find themselves marginalized and forgotten. We recognize that their 
+                                struggles encompass not only physical afflictions but also mental and emotional
+                                anguish, compounded by a lack of guidance and support.
+                            </p>
+                            <p>
+                                Our multifaceted approach to humanitarian aid encompasses a range of 
+                                interventions aimed at addressing the holistic needs of individuals and communities. 
+                                Through our programs, we provide essential resources such as food, shelter, and medical
+                                care to alleviate immediate hardships. Moreover, we recognize the critical importance
+                                of education and empowerment in breaking the cycle of poverty and despair.
+                            </p>
+                            <p>
+                                Guided by principles of empathy, integrity, and solidarity, we work tirelessly to 
+                                make a tangible difference in the lives of those we serve. By fostering resilience,
+                                dignity, and self-reliance, we aim not only to relieve pain and suffering but also 
+                                to catalyze enduring transformation at both the individual and community levels.
+                            </p>
+                        </div>
+                        
+                        <button class="btn btn-outline read-more-btn" id="about-read-more">
+                            <span class="btn-text">Read More</span>
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="about-cards fade-in-right">
+                        <div class="about-card">
+                            <div class="about-card-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3 class="about-card-title">Our Vision</h3>
+                            <p class="about-card-text">
+                                To serve the people in greatest need around the world, 
+                                to relieve their pain and suffering, 
+                                and to promote the transformation of their lives and conditions.
+                            </p>
+                        </div>
+                        
+                        <div class="about-card">
+                            <div class="about-card-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3 class="about-card-title">Our Mission</h3>
+                            <p class="about-card-text">
+                                To provide the poor, children, sick, needy, uneducated,
+                                oppressed and depressed with physical, mental, 
+                                emotional and mentorship help.
+                            </p>
+                        </div>
+                        
+                        <div class="about-card">
+                            <div class="about-card-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <h3 class="about-card-title">Our Values</h3>
+                            <ul class="about-values">
+                                <li><i class="fas fa-check"></i> Compassion</li>
+                                <li><i class="fas fa-check"></i> Integrity</li>
+                                <li><i class="fas fa-check"></i> Collaboration</li>
+                                <li><i class="fas fa-check"></i> Inclusivity</li>
+                                <li><i class="fas fa-check"></i> Empathy</li>
+                                <li><i class="fas fa-check"></i> Sustainability</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="members">
-            <img src="images/willy.jpg"">
-            <div class="name">
-                <h3>Willy Kelly</h3>
-                <p>General Secretary</p>  
-              </div>
-        </div>
-    </div>
+        <!-- ==================== IMPACT STATS SECTION ==================== -->
+        <section class="section impact">
+            <div class="container">
+                <div class="impact-grid">
+                    <div class="impact-item fade-in-up">
+                        <div class="impact-number">1000+</div>
+                        <div class="impact-label">Lives Impacted</div>
+                    </div>
+                    <div class="impact-item fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="impact-number">50+</div>
+                        <div class="impact-label">Communities Served</div>
+                    </div>
+                    <div class="impact-item fade-in-up" style="transition-delay: 0.2s;">
+                        <div class="impact-number">500+</div>
+                        <div class="impact-label">Children Educated</div>
+                    </div>
+                    <div class="impact-item fade-in-up" style="transition-delay: 0.3s;">
+                        <div class="impact-number">100%</div>
+                        <div class="impact-label">Commitment</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- ==================== CHARITY WORK SECTION ==================== -->
+        <section class="section charity" id="charity">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">What We Do</span>
+                    <h2 class="section-title">Our Charity Work</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="charity-content">
+                    <div class="charity-text fade-in-left">
+                        <p class="charity-intro">
+                            <strong>Young Visioners Foundation</strong> is deeply committed to its mission 
+                            of serving those in greatest need worldwide, with a vision to alleviate pain 
+                            and suffering while promoting lasting transformation in their lives and communities.
+                        </p>
+                        
+                        <div class="charity-details" id="charity-details">
+                            <p>
+                                Our charity work engagement is driven by a holistic approach that addresses the 
+                                diverse and complex needs of individuals facing poverty, illness, 
+                                lack of education, oppression, and emotional distress.
+                            </p>
+                            
+                            <div class="charity-programs">
+                                <div class="program-card">
+                                    <div class="program-icon">
+                                        <i class="fas fa-utensils"></i>
+                                    </div>
+                                    <h4>Basic Needs Assistance</h4>
+                                    <p>We provide immediate relief to those facing acute deprivation by offering 
+                                    access to food, clean water, shelter, and medical care.</p>
+                                </div>
+                                
+                                <div class="program-card">
+                                    <div class="program-icon">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <h4>Education & Empowerment</h4>
+                                    <p>Through scholarships, literacy programs, and skills development initiatives, 
+                                    we empower individuals to break the cycle of poverty.</p>
+                                </div>
+                                
+                                <div class="program-card">
+                                    <div class="program-icon">
+                                        <i class="fas fa-heartbeat"></i>
+                                    </div>
+                                    <h4>Healthcare Services</h4>
+                                    <p>We prioritize health and well-being by providing essential healthcare services, 
+                                    including preventive care, medical treatment, and mental health support.</p>
+                                </div>
+                                
+                                <div class="program-card">
+                                    <div class="program-icon">
+                                        <i class="fas fa-hands-helping"></i>
+                                    </div>
+                                    <h4>Mentorship & Support</h4>
+                                    <p>Through mentorship programs and peer support networks, we offer emotional 
+                                    guidance, counseling, and practical assistance.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-outline read-more-btn" id="charity-read-more">
+                            <span class="btn-text">Read More</span>
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="charity-gallery fade-in-right">
+                        <div class="gallery-container">
+                            <!-- Left Button -->
+                            <button class="gallery-btn gallery-prev" id="gallery-prev" type="button">
+                                <span>&#10094;</span>
+                            </button>
+                            
+                            <!-- Main Image -->
+                            <div class="gallery-main">
+                                <img src="./images/charity-education.jpg" alt="Charity work - volunteers teaching children" class="gallery-img-main" id="main-gallery-img">
+                            </div>
+                            
+                            <!-- Right Button -->
+                            <button class="gallery-btn gallery-next" id="gallery-next" type="button">
+                                <span>&#10095;</span>
+                            </button>
+                        </div>
+                        
+                        <!-- Image Counter -->
+                        <div class="gallery-counter" id="gallery-counter">1 / 4</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="members_container">
-        <div class="members">
-            <img src="images/sharon.jpg">
-        <div class="name">
-          <h3>Sharon Kamunzyu</h3>
-          <p>Vice Secretary</p>   
-        </div>
-        </div>
+        <!-- ==================== MEMBERSHIP SECTION ==================== -->
+        <section class="section membership" id="membership">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Our Team</span>
+                    <h2 class="section-title">Our Members</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="membership-intro fade-in">
+                    <p>
+                        Members of <strong>Young Visioners Foundation</strong> demonstrate a profound dedication
+                        to the organization's mission of serving those in direst need worldwide. 
+                        With a shared vision of alleviating pain and suffering while fostering 
+                        enduring transformation, our members are committed to making a meaningful 
+                        impact in the lives and communities of vulnerable populations.
+                    </p>
+                </div>
+                
+                <div class="members-grid">
+                    <!-- Leadership Row 1 -->
+                    <div class="member-card fade-in-up">
+                        <div class="member-image">
+                            <img src="images/avatar-matuku.jpg" alt="Matuku Kulu - Chairman">
+                            <div class="member-overlay">
+                                <div class="member-social">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Matuku Kulu</h3>
+                            <p>Chairman / Managing Director</p>
+                        </div>
+                    </div>
+                    
+                    <div class="member-card fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="member-image">
+                            <img src="images/avatar-felistter.svg" alt="Felister Mwenthya - Vice Chair">
+                            <div class="member-overlay">
+                                <div class="member-social">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Felister Mwenthya</h3>
+                            <p>Vice Chair / Deputy Director</p>
+                        </div>
+                    </div>
+                    
+                    <div class="member-card fade-in-up" style="transition-delay: 0.2s;">
+                        <div class="member-image">
+                            <img src="images/avatar-willy.jpg" alt="Willy Kelly - General Secretary">
+                            <div class="member-overlay">
+                                <div class="member-social">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Willy Kelly</h3>
+                            <p>General Secretary</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 2 -->
+                    <div class="member-card fade-in-up">
+                        <div class="member-image">
+                            <img src="images/avatar-sharon.svg" alt="Sharon Kamunzyu - Vice Secretary">
+                            <div class="member-overlay">
+                                <div class="member-social">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Sharon Kamunzyu</h3>
+                            <p>Vice Secretary</p>
+                        </div>
+                    </div>
+                    
+                    <div class="member-card fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="member-image">
+                            <img src="images/avatar-mike.jpg" alt="Mike Munyala - Treasurer">
+                            <div class="member-overlay">
+                                <div class="member-social">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Mike Munyala</h3>
+                            <p>Treasurer</p>
+                        </div>
+                    </div>
+                    
+                    <div class="member-card fade-in-up" style="transition-delay: 0.2s;">
+                        <div class="member-image">
+                            <img src="images/avatar-winnie.svg" alt="Winnie Muema - Organising Secretary">
+                            <div class="member-overlay">
+                                <div class="member-social">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Winnie Muema</h3>
+                            <p>Organising Secretary</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 3 -->
+                    <div class="member-card fade-in-up">
+                        <div class="member-image">
+                            <img src="images/avatar-elizabeth.svg" alt="Elizabeth Matuku - Member">
+                            <div class="member-overlay">
+                                <div class="member-social">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Elizabeth Matuku</h3>
+                            <p>Member</p>
+                        </div>
+                    </div>
+                    
+                    <div class="member-card fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="member-image">
+                            <img src="images/avatar-margaret.svg" alt="Magaret Kasina - Member">
+                            <div class="member-overlay">
+                                <div class="member-social">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Magaret Kasina</h3>
+                            <p>Member</p>
+                        </div>
+                    </div>
+                    
+                    <div class="member-card fade-in-up" style="transition-delay: 0.2s;">
+                        <div class="member-image">
+                            <img src="images/avatar-prisca.svg" alt="Prisca Kituku - Member">
+                            <div class="member-overlay">
+                                <div class="member-social">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Prisca Kituku</h3>
+                            <p>Member</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="members">
-            <img src="images/mike.jpg">
-            <div class="name">
-                <h3>Mike Munyala</h3>
-                <p>Tresurer</p>   
-              </div>
-        </div>
-        
-        <div class="members">
-            <img src="images/winnie.jpg">
-            <div class="name">
-                <h3>Winnie Muema</h3>
-                <p>Organising Secretary</p>  
-              </div>
-        </div>
-    </div>
-<div class="members_container">
-        <div class="members">
-            <img src="images/elizabeth.jpg">
-        <div class="name">
-          <h3>Elizabeth Matuku</h3>
-          <p>Member</p>   
-        </div>
-        </div>
+        <!-- ==================== DONATE SECTION ==================== -->
+        <section class="section donate" id="donate">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Make a Difference</span>
+                    <h2 class="section-title">Donate Today</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="donate-content">
+                    <div class="donate-text fade-in-left">
+                        <h3>Your Support Changes Lives</h3>
+                        <p>
+                            Every contribution, no matter the size, helps us continue our mission 
+                            of serving those in greatest need. Your generosity provides food, education, 
+                            healthcare, and hope to vulnerable communities worldwide.
+                        </p>
+                        
+                        <div class="donation-methods">
+                            <div class="donation-card">
+                                <div class="donation-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <h4>M-Pesa</h4>
+                                <p class="donation-detail"><strong>Pay Bill:</strong> 522522</p>
+                                <p class="donation-detail"><strong>Account:</strong> 7557680</p>
+                                <p class="donation-detail"><strong>Send Money:</strong> 0740770267</p>
+                            </div>
+                            
+                            <div class="donation-card">
+                                <div class="donation-icon">
+                                    <i class="fab fa-paypal"></i>
+                                </div>
+                                <h4>PayPal</h4>
+                                <p class="donation-detail"><strong>Email:</strong></p>
+                                <p class="donation-detail paypal-email">matukukulu77@gmail.com</p>
+                            </div>
+                            
+                            <div class="donation-card">
+                                <div class="donation-icon">
+                                    <i class="fas fa-hand-holding-heart"></i>
+                                </div>
+                                <h4>Other Ways</h4>
+                                <p class="donation-detail">Contact us for bank transfer</p>
+                                <p class="donation-detail">or other donation methods</p>
+                            </div>
+                        </div>
+                        
+                        <a href="https://wa.me/+254740770267?text=Hello!%20I%20want%20to%20donate" 
+                           class="btn btn-primary btn-large" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Donate via WhatsApp
+                        </a>
+                    </div>
+                    
+                    <div class="donate-image fade-in-right">
+                        <img src="images/donate-hands.jpg" alt="Hands helping - donation and support">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="members">
-            <img src="images/Margarete.jpg">
-            <div class="name">
-                <h3>Magaret Kasina</h3>
-                <p>Member</p>   
-              </div>
-        </div>
-        
-        <div class="members">
-            <img src="images/prisca.jpg">
-            <div class="name">
-                <h3>Prisca Kituku</h3>
-                <p>Member</p>  
-              </div>
-        </div>
-    </div>
-</div>
+        <!-- ==================== TESTIMONIALS SECTION ==================== -->
+        <section class="section testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Stories of Hope</span>
+                    <h2 class="section-title">Impact Stories</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card fade-in-up">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Thanks to Young Visioners Foundation, my children can now go to school. 
+                            The support we received changed our entire family's future."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Maria K.</h4>
+                                <span>Beneficiary - Education Program</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "The medical care I received when I was sick gave me a second chance at life. 
+                            I'm forever grateful for their compassion."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>John M.</h4>
+                                <span>Beneficiary - Healthcare Program</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card fade-in-up" style="transition-delay: 0.2s;">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Being part of this foundation has shown me the power of giving. 
+                            Together we're making real change in our community."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Sarah W.</h4>
+                                <span>Volunteer & Donor</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-</div>
+        <!-- ==================== CONTACT SECTION ==================== -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 class="section-title">Contact Us</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info fade-in-left">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email Us</h4>
+                                <a href="mailto:matukukulu77@gmail.com">matukukulu77@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Call Us</h4>
+                                <a href="tel:+254740770267">+254 740 770 267</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>Kenya, East Africa</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-social">
+                            <h4>Follow Us</h4>
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/profile.php?id=100094133446064" 
+                                   target="_blank" class="social-link" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://vm.tiktok.com/ZMM4aXuSw/" 
+                                   target="_blank" class="social-link" aria-label="TikTok">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@matukukulu8248" 
+                                   target="_blank" class="social-link" aria-label="YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="https://wa.me/+254740770267" 
+                                   target="_blank" class="social-link" aria-label="WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container fade-in-right">
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="Your Phone">
+                            </div>
+                            <div class="form-group">
+                                <select id="subject" name="subject" required>
+                                    <option value="" disabled selected>Subject</option>
+                                    <option value="donation">Donation Inquiry</option>
+                                    <option value="volunteer">Volunteer Opportunity</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="general">General Inquiry</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
 
- <!------------donate-------->
- <div id="donate">
-    <div class="container">
-       <h1 class="sub-title">For Donations</h1>
-       <p>To donate and support our vision you can use:<br><br>
-         MPESA PAY BILL NO: 522522<br><br>
-         Acc. No: 7557680<br><br>
-         SEND MONEY: 0740770267<br><br>
-        <p> <i class="fa-brands fa-paypal" style="color: #ababab; font-size: 30px;"></i>&nbsp;&nbsp;Paypal: matukukulu77@gmail.com</p>
-    </div>
-    <div id="contact">
+        <!-- ==================== CTA SECTION ==================== -->
+        <section class="section cta">
+            <div class="container">
+                <div class="cta-content fade-in">
+                    <h2>Ready to Make a Difference?</h2>
+                    <p>Join us in our mission to bring hope and transformation to those who need it most.</p>
+                    <div class="cta-buttons">
+                        <a href="#donate" class="btn btn-primary btn-large">
+                            <i class="fas fa-heart"></i> Donate Now
+                        </a>
+                        <a href="#contact" class="btn btn-white btn-large">
+                            <i class="fas fa-handshake"></i> Become a Partner
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="contact-right">
-                <h1 class="sub-title">Contact Us</h1>
-                <p><i style="color: #ababab;" class="fa-solid fa-paper-plane"></i>&nbsp;&nbsp;matukukulu77@gmail.com<br><br></p>
-                <p><i style="color: #ababab;" class="fa-solid fa-square-phone"></i>&nbsp;&nbsp;0740770267</p>
-                <div class="social-icons"><br>
-                    FOLLOW US ON SOCIAL MEDIA<br><br>
-                    <a href="https://www.facebook.com/profile.php?id=100094133446064"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://vm.tiktok.com/ZMM4aXuSw/"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="https://www.youtube.com/@matukukulu8248"><i class="fa-brands fa-youtube"></i></a>
+            <div class="footer-content">
+                <div class="footer-about">
+                    <img src="images/logo.png" alt="YVF Logo" class="footer-logo">
+                    <h3>Young Visioners Foundation</h3>
+                    <p>A beacon of hope and compassion, serving those in direst need across the globe.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#charity">Our Work</a></li>
+                        <li><a href="#donate">Donate</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> matukukulu77@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +254 740 770 267</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Kenya, East Africa</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Stay Connected</h4>
+                    <p>Subscribe to receive updates on our work and impact stories.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
                 </div>
             </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Young Visioners Foundation. All Rights Reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> for humanity</p>
+            </div>
         </div>
-    </div>
-    <div class="copyright">
-        <p>Copyright © YOUNG VISIONERS FOUNDATION 2024 <i class="fa-solid fa-heart"></i></p>  
-      </div>
-    </div>
+    </footer>
 
-     <!------------Javascript-------->
-     <script>
-        function myFunction() {
-        var summary = document.getElementById("summary");
-        var moreText = document.getElementById("details");
-        var btnText = document.getElementById("readMoreLessBtn");
-
-        if (summary.style.display === "none") {
-        summary.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-        } else {
-        summary.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
-        }
-        }
-    </script>
-
-<script>
-    function myFunction2() {
-    var less = document.getElementById("less");
-    var moreText2 = document.getElementById("more");
-    var btnText2 = document.getElementById("readMoreLessBtn2");
-
-    if (less.style.display === "none") {
-    less.style.display = "inline";
-    btnText2.innerHTML = "Read more";
-    moreText2.style.display = "none";
-    } else {
-    less.style.display = "none";
-    btnText2.innerHTML = "Read less";
-    moreText2.style.display = "inline";
-    }
-    }
-</script>
-
-<script>
-    function myFunction3() {
-    var less_content = document.getElementById("less_content");
-    var moreText3 = document.getElementById("more_content");
-    var btnText3 = document.getElementById("readMoreLessBtn3");
-
-    if (less_content.style.display === "none") {
-    less_content.style.display = "inline";
-    btnText3.innerHTML = "Read more";
-    moreText3.style.display = "none";
-    } else {
-    less_content.style.display = "none";
-    btnText3.innerHTML = "Read less";
-    moreText3.style.display = "inline";
-    }
-    }
-</script>
+    <!-- ==================== FLOATING ELEMENTS ==================== -->
+    <a href="https://wa.me/+254740770267?text=Hello!%20Young%20Visioners%20Foundation" 
+       class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
     
-    
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('#slideshow img');
-        setInterval(() => {
-            slides[currentSlide].style.display = 'none';
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].style.display = 'inline-block';
-        }, 3000); // Change slide every 3 seconds
-    </script>
-<script>
-window.onscroll = function() {scrollFunction()};
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-function scrollFunction() {
-    var button = document.getElementById("scrollToTopBtn");
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        button.style.display = "block";
-    } else {
-        button.style.display = "none";
-    }
-}
-
-function scrollToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-
-</script>
-
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-function openmenu(){
-sidemenu.style.right = "0";
-}
-function closemenu(){
-sidemenu.style.right = "-200px";
-}
-</script>
-    
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script src="script.js"></script>
 </body>
 </html>
